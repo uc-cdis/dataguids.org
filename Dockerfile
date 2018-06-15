@@ -21,4 +21,4 @@ RUN hugo
 FROM nginx
 
 COPY --from=builder /dataguids.org/public /usr/share/nginx/html
-COPY nginx.conf /etc/nginx/conf.d/nginx.conf
+COPY nginx.conf /etc/nginx/conf.d
