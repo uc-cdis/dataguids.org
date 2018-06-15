@@ -5,7 +5,7 @@
                           $("#resolveit").click(function(e){
                                e.preventDefault();
                                $.ajax({type: "GET",
-                                      url: "http://dcp.bionimbus.org/index/ga4gh/dos/v1/dataobjects/" + $("#guidval").val(),
+                                      url: "https://dcp.bionimbus.org/index/ga4gh/dos/v1/dataobjects/" + $("#guidval").val(),
                                       success:function(result){
                                       console.log(result);
                                       $("#resolverresult").text(JSON.stringify(result, undefined, 2));
