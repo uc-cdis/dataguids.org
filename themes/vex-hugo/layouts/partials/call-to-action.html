@@ -1,0 +1,40 @@
+    {{- with .Site.Params.call_to_action }}
+    <section class="call-to-action section bg-opacity bg-1">
+      <script>
+        $(document).ready(function(){
+                          $("#resolveit").click(function(e){
+                               e.preventDefault();
+                               $.ajax({type: "GET",
+                                      url: "http://dcp.bionimbus.org/index/ga4gh/dos/v1/dataobjects/" + $("#guidval").val(),
+                                      success:function(result){
+                                      console.log(result);
+                                      $("#resolverresult").text(JSON.stringify(result, undefined, 2));
+                                      }});
+                               });
+        });
+      </script>
+      <a name="resolver"></a>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 wow text-center">
+            <div class="block">
+              <h2 class="subheading">{{ .title }}</h2>
+              <p>{{ .text }}</p>
+              <div class="col-lg-8 offset-lg-2">
+                <div class="input-group">
+                  <input id="guidval" type="text" class="form-control" placeholder="{{ .placeholder }}">
+                  <span class="input-group-btn">
+                    <button id="resolveit" class="btn btn-default btn-main" type="button">{{ .button_text }}</button>
+                  </span>
+                  
+                </div><!-- /input-group -->
+                <pre id="resolverresult" style="margin-top: 2em">
+                  &nbsp;
+                </pre>
+              </div><!-- /.col-lg-6 -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- #call-to-action close -->
+    {{- end }}

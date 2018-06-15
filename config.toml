@@ -1,0 +1,109 @@
+baseURL = "http://dataguids.org/"
+languageCode = "en-us"
+title = "Data GUIDs"
+theme = "vex-hugo"
+
+[params]
+  description = ""
+
+  # Put your custom stylesheets and scripts
+  custom_stylesheets = []
+  custom_scripts = []
+
+  # Additional meta
+  [[params.meta]]
+    name = ""
+    description = ""
+
+  # Navigation bar informations
+  [params.navbar]
+    logo = "Data GUID"
+    [[params.navbar.menu]]
+      link = "#"
+      text = "HOME"
+    [[params.navbar.menu]]
+      link = "#about"
+      text = "ABOUT"
+    [[params.navbar.menu]]
+      link = "#features"
+      text = "FEATURES"
+    [[params.navbar.menu]]
+      link = "#resolver"
+      text = "RESOLVER"
+
+  # Header
+  [params.header]
+    title = "Believe in Technology, Make the change"
+    text = "Data GUIDs enable you to mint globally unique identifiers for data in a scalable distributed architecture."
+    [params.header.image]
+      path = "images/watch.png"
+      alt = "Watch"
+    [params.header.button]
+      link = "#about"
+      text = "Learn more"
+
+  # Features
+  [params.features]
+    title = "Our Core Features"
+    [params.features.image]
+      path = "images/watch-2.png"
+      alt = "Watch"
+    # Menu at the left of the image
+    [[params.features.left]]
+      icon = "tf-ion-ios-search"
+      title = "Scalable"
+      text = "Supports trillions of GUIDs across a distributed set of commons."
+    [[params.features.left]]
+      icon = "tf-ion-ios-bell-outline"
+      title = "Open Source"
+      text = "The platform is open for modification and inspection. Pull requests welcome."
+    [[params.features.left]]
+      icon = "tf-ion-ios-cart-outline"
+      title = "Free"
+      text = "Lookups are free and minting is free. Always."
+    # Menu at the right of the image
+    [[params.features.right]]
+      icon = "tf-ion-ios-alarm-outline"
+      title = "Namespaced"
+      text = "Unopinionated namespaces allowing for distributed lookups and global uniqueness."
+    [[params.features.right]]
+      icon = "tf-ion-ios-bell-outline"
+      title = "Elegant Design"
+      text = "Crafted with extreme care for the Data Biosphere."
+    [[params.features.right]]
+      icon = "tf-ion-ios-cart-outline"
+      title = "DOS API"
+      text = "Use the Data Object Service API to resolve your GUIDs today."
+
+  [params.promo]
+    title = "Data GUIDs for all of your identifier needs"
+    text = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia vel labore, deleniti minima nisi, velit atque quaerat impedit ea maxime sunt accusamus at obcaecati dolor iure iusto omnis quis eum.  \nLorem ipsum dolor sit amet, consectetur adipisicing elit. Quia vel labore, deleniti minima nisi, velit atque quaerat impedit ea maxime sunt accusamus at obcaecati dolor iure iusto omnis quis eum."
+    [params.promo.image]
+      path = "images/watch.png"
+      alt = "Watch"
+
+  [params.call_to_action]
+    title = "Resolve a Data GUID"
+    text = "Turn your Data GUID into information you can use!"
+    placeholder = "Your Data GUID Here"
+    button_text = "Resolve"
+
+  [params.testimonials]
+    title = "Data GUIDs Review"
+    [[params.testimonials.blocks]]
+      text = "Data GUIDs are are the way to go for identifying your data objects. I love the prefixes feature, which helps you resolve the location of the data object given the GUID. With the global uniqueness and the prefixes, these data GUIDs are also FAIR compliant."
+      name = "Bob"
+      position = "Principal Investigator"
+      image = "images/avater.png"
+    [[params.testimonials.blocks]]
+      text = "It was always a burden when my identifiers were only unique within a database. Merging databases? Pulling data objects from multiple locations for analysis? What a headache! But with globally-unique identifiers for my data, I can analyze without worrying about identifiers being duplicated and my analysis being sullied. Well, at least being sullied by duplicate IDs. Thanks dataguids.org!"
+      name = "Trevar"
+      position = "Project Manager"
+      image = "images/avater2.png"
+    [[params.testimonials.blocks]]
+      text = "Data GUIDs are a rare thing in my life, they make it easy!"
+      name = "Phillis"
+      position = "Lead Software Architect"
+      image = "images/avater3.png"
+
+  # Footer uses navbar data
