@@ -101,7 +101,7 @@ theme = "vex-hugo"
       position = "Project Manager"
       image = "images/avater2.png"
     [[params.testimonials.blocks]]
-      text = "Data GUIDs are a rare thing in my life, they make it easy!"
+      text = "As a software architect, I appreciate that the GUIDs keep my end users happy. My software mints globally unique identifiers in multiple data commons or other storage solutions--GUIDs for files, for datasets, or even for collections of datasets--and then my users can search multiple data commons, know the data’s “home” database, and then do their analysis. They can even build apps on top of my software to automate much of the process. And when my users are happy, I’m happy."
       name = "Phillis"
       position = "Lead Software Architect"
       image = "images/avater3.png"
