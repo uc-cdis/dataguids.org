@@ -33,7 +33,7 @@ theme = "vex-hugo"
 
   # Header
   [params.header]
-    title = "Believe in Technology, Make the change"
+    title = "Domain Neutral Persistent Identifiers for the Modern Web"
     text = "Data GUIDs enable you to mint globally unique identifiers for data in a scalable distributed architecture."
     [params.header.image]
       path = "images/watch.png"
@@ -95,6 +95,11 @@ theme = "vex-hugo"
       name = "Bob"
       position = "Principal Investigator"
       image = "images/avater.png"
+    [[params.testimonials.blocks]]
+      text = "A very common problem for programmers is describing data in such a way that does not assume its location. Data GUIDs provide an easy-to-use and extensible namespace for describing data that gives programmers confidence their data can be later reused, or retracted. By decoupling data representation from data access, Data GUIDs allow a ground up representation of uniqueness that can span most cloud and on-premises service architectures. That means that software written around Data GUIDs will be easier to migrate from one platform to another, and that strong guarantees can be given that two parties are computing on the same data."
+      name = "David"
+      position = "Bioinformatics Programmer"
+      image = "images/avater4.jpeg"
     [[params.testimonials.blocks]]
       text = "It was always a burden when my identifiers were only unique within a database. Merging databases? Pulling data objects from multiple locations for analysis? What a headache! But with globally-unique identifiers for my data, I can analyze without worrying about identifiers being duplicated and my analysis being sullied. Well, at least being sullied by duplicate IDs. Thanks dataguids.org!"
       name = "Trevar"
