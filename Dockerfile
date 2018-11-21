@@ -22,3 +22,4 @@ FROM nginx
 
 COPY --from=builder /dataguids.org/public /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/conf.d
+COPY dockerStart.sh ./dockerStart.sh
