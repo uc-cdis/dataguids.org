@@ -2,15 +2,38 @@
     <section class="call-to-action section bg-opacity bg-1">
       <script>
         $(document).ready(function(){
-                          $("#resolveit").click(function(e){
-                               e.preventDefault();
-                               $.ajax({type: "GET",
-                                      url: "https://dataguids.org/ga4gh/dos/v1/dataobjects/" + $("#guidval").val(),
-                                      success:function(result){
-                                      console.log(result);
-                                      $("#resolverresult").text(JSON.stringify(result, undefined, 2));
-                                      }});
-                               });
+          $("#resolveit").click(function(e){
+            e.preventDefault();
+            if (!$("#guidval").val()) {
+              // No input: clear text
+              $("#resolverresult").text("");
+              return;
+            }
+            $.ajax({
+              type: "GET",
+              url: "https://dataguids.org/ga4gh/dos/v1/dataobjects/" + $("#guidval").val(),
+              success:function(result){
+                console.log(result);
+                // Display result JSON
+                $("#resolverresult").text(
+                  JSON.stringify(result, undefined, 2)
+                );
+              },
+              error:function(result){
+                console.log("Error:", result.responseJSON);
+                if (result.status === 404) {
+                  $("#resolverresult").text(
+                    "Data GUID \"" + $("#guidval").val() + "\" not found."
+                  );
+                }
+                else {
+                  $("#resolverresult").text(
+                    result.status + " " + result.statusText
+                  );
+                }
+              }
+            })
+          });
         });
       </script>
       <a name="resolver"></a>
