@@ -30,6 +30,9 @@ theme = "vex-hugo"
     [[params.navbar.menu]]
       link = "#resolver"
       text = "RESOLVER"
+    [[params.navbar.menu]]
+      link = "#register"
+      text = "REGISTER"
 
   # Header
   [params.header]
@@ -87,6 +90,9 @@ theme = "vex-hugo"
     text = "Turn your Data GUID into information you can use!"
     placeholder = "Your Data GUID Here"
     button_text = "Resolve"
+
+  [params.register]
+    text = "Register prefix for your data GUIDs"
 
   [params.testimonials]
     title = "Data GUIDs Review"

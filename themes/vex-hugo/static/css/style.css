@@ -420,6 +420,21 @@ a:active {
       padding-left: 15px;
       box-shadow: none; }
 
+/*--
+    register start
+--*/
+.register {
+    background: #dddddd;
+    }
+
+.register .register-form, .register-form {
+    width: 100%;
+    height: 1450px;
+    border: none;
+    margin: 0px;
+    }
+
+
 footer {
   text-align: center;
   background: #f4f4f4;
