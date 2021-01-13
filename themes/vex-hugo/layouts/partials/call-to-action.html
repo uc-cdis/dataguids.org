@@ -11,7 +11,7 @@
             }
             $.ajax({
               type: "GET",
-              url: "https://dataguids.org/ga4gh/dos/v1/dataobjects/" + $("#guidval").val(),
+              url: "/ga4gh/dos/v1/dataobjects/" + $("#guidval").val(),
               success:function(result){
                 console.log(result);
                 // Display result JSON
