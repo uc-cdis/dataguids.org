@@ -1,4 +1,4 @@
-FROM golang:1.8.3-alpine as builder
+FROM quay.io/cdis/golang:1.8.3-alpine as builder
 
 ENV HUGO_VERSION 0.41
 ENV HUGO_BINARY hugo_${HUGO_VERSION}_linux-64bit
@@ -18,7 +18,7 @@ COPY . /dataguids.org
 WORKDIR /dataguids.org
 RUN hugo
 
-FROM nginx
+FROM quay.io/cdis/nginx:stable
 
 COPY --from=builder /dataguids.org/public /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/conf.d
