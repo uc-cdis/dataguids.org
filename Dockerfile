@@ -18,7 +18,7 @@ COPY . /dataguids.org
 WORKDIR /dataguids.org
 RUN hugo
 
-FROM nginx
+FROM quay.io/cdis/nginx:stable
 
 COPY --from=builder /dataguids.org/public /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/conf.d
